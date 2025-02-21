@@ -1,5 +1,6 @@
 package frc.robot.subsystems;
 
+import com.revrobotics.RelativeEncoder;
 import com.revrobotics.spark.SparkMax;
 import com.revrobotics.spark.SparkLowLevel.MotorType;
 
@@ -9,10 +10,12 @@ public class SwerveModule extends SubsystemBase {
     private final SparkMax driveSparkMax;
     private final SparkMax turningSparkMax;
     
+    //private final RelativeEncoder driveEncoder;
+    
+
     public SwerveModule(int driveId, int turningId, double anuglarOffset){
         driveSparkMax = new SparkMax(driveId, MotorType.kBrushless);
         turningSparkMax = new SparkMax(turningId, MotorType.kBrushless);
 
-        
     }
 }
